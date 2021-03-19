@@ -92,6 +92,123 @@
           }
         }
       }
+    },
+    "shared-ui-lib-one": {
+      "projectType": "library",
+      "root": "libs/shared/ui/lib-one",
+      "sourceRoot": "libs/shared/ui/lib-one/src",
+      "prefix": "nwt",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui/lib-one/tsconfig.lib.json",
+            "project": "libs/shared/ui/lib-one/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui/lib-one/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/lib-one/src/**/*.ts",
+              "libs/shared/ui/lib-one/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui/lib-one"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui/lib-one/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "alpha-feature-lorem": {
+      "projectType": "library",
+      "root": "libs/alpha/feature-lorem",
+      "sourceRoot": "libs/alpha/feature-lorem/src",
+      "prefix": "nwt",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/alpha/feature-lorem/tsconfig.lib.json",
+            "project": "libs/alpha/feature-lorem/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/alpha/feature-lorem/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/alpha/feature-lorem/src/**/*.ts",
+              "libs/alpha/feature-lorem/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/alpha/feature-lorem"
+          ],
+          "options": {
+            "jestConfig": "libs/alpha/feature-lorem/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "alpha-feature-shell": {
+      "projectType": "library",
+      "root": "libs/alpha/feature-shell",
+      "sourceRoot": "libs/alpha/feature-shell/src",
+      "prefix": "nwt",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/alpha/feature-shell/tsconfig.lib.json",
+            "project": "libs/alpha/feature-shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/alpha/feature-shell/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/alpha/feature-shell/src/**/*.ts",
+              "libs/alpha/feature-shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/alpha/feature-shell"
+          ],
+          "options": {
+            "jestConfig": "libs/alpha/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -107,7 +224,8 @@
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "strict": true
     },
     "@nrwl/angular:component": {
       "style": "scss"

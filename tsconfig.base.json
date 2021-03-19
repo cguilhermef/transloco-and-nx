@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@transloco-and-nx/shared/ui/lib-one": [
+        "libs/shared/ui/lib-one/src/index.ts"
+      ],
+      "@transloco-and-nx/alpha/feature-lorem": [
+        "libs/alpha/feature-lorem/src/index.ts"
+      ],
+      "@transloco-and-nx/alpha/feature-shell": [
+        "libs/alpha/feature-shell/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

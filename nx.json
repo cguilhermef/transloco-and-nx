@@ -15,5 +15,10 @@
       "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
-  "projects": { "nwt": { "tags": ["type:app"] } }
+  "projects": {
+    "nwt": { "tags": ["type:app"] },
+    "shared-ui-lib-one": { "tags": ["scope:shared", "type:ui"] },
+    "alpha-feature-lorem": { "tags": ["scope:alpha", "type:feature"] },
+    "alpha-feature-shell": { "tags": ["scope:alpha", "type:feature"] }
+  }
 }
